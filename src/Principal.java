@@ -1,15 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Principal {
     public static void main(String[] args) {
-        PF pf1 = new PF();
-        pf1.setCPF("08911406112");
-        pf1.setDataNascimento("05/03/1983");
-        pf1.setNome("Japinha");
-        pf1.setTelefone("61995426629");
+        List<Veiculo> lista = new ArrayList<>();
 
-        
-        System.out.println("Nome: " + pf1.getNome());
-        System.out.println("CPF: " + pf1.getCPF());
-        System.out.println("Data de Nascimento: " + pf1.getDataNascimento());
-        System.out.println("Telefone: " + pf1.getTelefone());
+        lista.add(new Carro("Ford", "Fiesta", 2020, 100, "ABC-1234", 4));
+        lista.add(new Moto("Honda", "CB500", 2019, 80, "XYZ-5678", 500));
+        lista.add(new Caminhao("Volvo", "FH", 2018, 300, "TRK-9012", 10));
+
+        int diasAluguel = 3;
+
+        for (Veiculo v : lista) {
+            System.out.println("Marca: " + v.getMarca() +
+                               ", Modelo: " + v.getModelo() +
+                               ", Valor do aluguel (" + diasAluguel + " dias): R$ " + v.calcularAluguel(diasAluguel));
+        }
     }
 }
