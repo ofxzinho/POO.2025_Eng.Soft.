@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		// 1. Definição das variáveis (como no exercício)
+		// 1. Definição das variáveis 
 		String product1 = "Computer";
 		String product2 = "Office desk";
 		
@@ -24,7 +24,6 @@ public class Main {
 		
 		// Produtos
 		System.out.println("Products:");
-		// Para replicar a saída, a formatação precisa ser: String, texto literal com o cifrão e double formatado
 		System.out.printf("%s, which price is $ %.2f\n", product1, price1);
 		System.out.printf("%s, which price is $ %.2f\n", product2, price2);
 		
@@ -49,4 +48,5 @@ public class Main {
 		System.out.printf("US decimal point: %.3f\n", measure);
 
 	}
+
 }
